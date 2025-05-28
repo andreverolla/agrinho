@@ -1,13 +1,11 @@
-function LinkButtonHover () {
+export function LinkButtonHover (props) {
     return (
-        <></>
+        <span><a href={props.href} title={props.title} className="">{props.text}</a></span>
     )
 }
 
-function LinkButtonSimple () {
+export function LinkButtonSimple (props) {
     return (
-        <></>
+        <span><a href={props.href} title={props.title} className="">{props.text}</a></span>
     )
 }
-
-export default LinkButtonHover; LinkButtonSimple
