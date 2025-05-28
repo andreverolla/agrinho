@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Wix+Madefor+Display:wght@400;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -6,4 +7,39 @@
   --color-black: #131313;
   --color-pattern: #F8F8F8;
   --text-xl: 1.1rem;
+
+  --font-sans: "Syne", sans-serif;
+  --font-titles: "Wix Madefor Display", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+
+  h1, h2, h3 {
+    @apply font-titles;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--color-hover);
+}
+html::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+html::-webkit-scrollbar-track:hover {
+  background: var(--color-gray-900);
 }
