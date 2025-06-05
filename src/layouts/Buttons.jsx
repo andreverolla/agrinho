@@ -1,6 +1,6 @@
 export function LinkButtonHover (props) {
     return (
-        <span><a href={props.href} title={props.title} className="hover:bg-hover-black font-medium border-2 border-solid rounded-full py-3 px-5 text-button-p bg-button hover:text-pattern border-stoke">{props.text}</a></span>
+        <span><a href={props.href} title={props.title} className="max-lg:text-base max-md:text-xl hover:bg-hover-black font-medium border-2 border-solid rounded-full py-3 px-6 max-lg:px-4 text-button-p bg-button hover:text-pattern border-stoke">{props.text}</a></span>
     )
 }
 

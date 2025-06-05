@@ -7,10 +7,10 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'sm': { max: '640px' },
-      'md': { max: '768px' },
-      'lg': { max: '1024px' },
-      'xl': { max: '1280px' },
+      'max-sm': { max: '640px' },
+      'max-md': { max: '768px' },
+      'max-lg': { max: '1024px' },
+      'max-xl': { max: '1280px' },
     },
   },
   plugins: [],
