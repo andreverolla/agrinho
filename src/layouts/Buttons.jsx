@@ -6,6 +6,6 @@ export function LinkButtonHover (props) {
 
 export function LinkButtonSimple (props) {
     return (
-        <span><a href={props.href} title={props.title} className="">{props.text}</a></span>
+        <span><a href={props.href} title={props.title} className="bg-">{props.text}</a></span>
     )
 }

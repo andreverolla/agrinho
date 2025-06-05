@@ -17,8 +17,8 @@
     @apply font-sans;
   }
 
-  h1, h2, h3 {
-    @apply font-titles;
+  h1, h2, h3, p, a {
+    @apply font-titles text-pattern;
   }
 }
 
