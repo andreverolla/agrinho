@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Wix+Madefor+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Wix+Madefor+Display:wght@400..800&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #588157;
-  --color-hover: #3A5A40;
+  --color-stoke: #5F5F5F;
+  --color-button: #1A191C;
+  --color-secondary-black: #B2AFAB;
+  --color-secondary-white: #757176;
+  --color-button-p: #D1D1D0;
+  --color-hover-black: #252328;
+  --color-hover-thumb: #CBCBCB;
   --color-black: #131313;
   --color-pattern: #F8F8F8;
   --text-xl: 1.1rem;
@@ -18,7 +23,7 @@
   }
 
   h1, h2, h3, p, a {
-    @apply font-titles text-pattern;
+    @apply text-pattern;
   }
 }
 
@@ -31,15 +36,11 @@ html::-webkit-scrollbar {
   width: 10px;
 }
 html::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
+  background: var(--color-pattern);
 }
 html::-webkit-scrollbar-thumb:hover {
-  background: var(--color-hover);
+  background: var(--color-hover-thumb);
 }
 html::-webkit-scrollbar-track {
   background: var(--color-black);
-}
-
-html::-webkit-scrollbar-track:hover {
-  background: var(--color-gray-900);
 }
