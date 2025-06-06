@@ -7,8 +7,8 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 right-0 z-50 w-full h-20 bg-transparent">
-      <nav className="flex justify-between items-center h-[70px] py-6 px-20 max-lg:px-10 w-full max-w-[1280px]">
+    <header className="fixed top-0 left-0 z-50 w-full bg-black">
+      <nav className="flex justify-between items-center h-20 py-6 px-20 max-lg:px-10 max-w-[1430px] mx-auto">
         <a href="./" title="AgriTech">
           <h1 className="text-3xl font-semibold max-lg:text-2xl">AgriTech</h1>
         </a>
@@ -19,7 +19,10 @@ function Header() {
         </div>
 
         {/* Menu de navegação */}
-        <ul className="flex gap-6 max-md:fixed max-md:top-0 max-md:left-0 max-md:w-[100vw] max-md:h-[100vh] ">
+        <ul
+          className={`flex flex-col md:flex-row gap-6 absolute md:static top-20 left-0 w-full md:w-auto bg-black md:bg-transparent py-4 md:py-0 px-6 md:px-0 transition-all duration-300 z-40 
+          ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto"}`}
+        >
           <Link href="#home" title="Início" text="início" />
           <Link href="#about" title="Sobre" text="sobre" />
           <Link href="#gallery" title="Galeria" text="galeria" />

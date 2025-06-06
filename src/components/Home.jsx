@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <section className="bg-black h-[100rem]">
+    <section className="bg-amber-950 h-[100rem]">
       
     </section>
   )

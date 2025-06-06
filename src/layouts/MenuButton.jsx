@@ -10,16 +10,16 @@ export default function MenuButton() {
       aria-label="Menu"
     >
       <span
-        className={`h-[0.125rem] w-full rounded-[0.125rem] bg-neutral-400 transition-all duration-400
-          ${isOpen ? 'translate-y-[7.5px] rotate-[-45deg] bg-[#55067C]' : ''}`}
+        className={`h-[0.125rem] w-full rounded-[0.125rem] bg-secondary-black transition-all duration-400
+          ${isOpen ? 'translate-y-[7.5px] rotate-[-45deg]' : ''}`}
       />
       <span
-        className={`h-[0.125rem] w-full rounded-[0.125rem] bg-neutral-400 transition-all duration-400
+        className={`h-[0.125rem] w-full rounded-[0.125rem] bg-secondary-black transition-all duration-400
           ${isOpen ? 'w-0 opacity-0' : ''}`}
       />
       <span
-        className={`h-[0.125rem] w-full rounded-[0.125rem] bg-neutral-400 transition-all duration-400
-          ${isOpen ? '-translate-y-[7.5px] rotate-[45deg] bg-[#55067C]' : ''}`}
+        className={`h-[0.125rem] w-full rounded-[0.125rem] bg-secondary-black transition-all duration-400
+          ${isOpen ? '-translate-y-[7.5px] rotate-[45deg]' : ''}`}
       />
     </button>
   );
