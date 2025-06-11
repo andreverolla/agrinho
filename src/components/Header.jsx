@@ -1,15 +1,95 @@
-import { useState } from "react";
-import Link from "../layouts/Links";
+import { useState, useEffect, useRef } from "react";
+
+import { motion, AnimatePresence } from "framer-motion";
+
+import { Link } from "../layouts/Links";
 import { LinkButtonHover } from "../layouts/Buttons";
 import MenuButton from "../layouts/MenuButton";
 
+/* Navegation links */
+const sections = [
+  {
+    to: "home",
+    title: "Início",
+    text: "início"
+  },
+  {
+    to: "about",
+    title: "Sobre",
+    text: "sobre"
+  },
+  {
+    to: "projects",
+    title: "Projetos",
+    text: "projetos"
+  },
+  {
+    to: "stories",
+    title: "Histórias",
+    text: "histórias"
+  },
+  {
+    to: "gallery",
+    title: "Galeria",
+    text: "galeria"
+  }
+];
+
 function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
+  const [activeSection, setActiveSection] = useState("home");
+  const linkRefs = useRef({})
+
+
+  /* Para evitar o scroll quando o menu estiver aberto */
+  useEffect(() => {
+  if (isOpen) {
+    document.body.classList.add("overflow-hidden");
+  } else {
+    document.body.classList.remove("overflow-hidden");
+  }
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [isOpen]);
+
+
+  /* Acessibilidade para fechar o menu com a tecla ESC */
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setIsOpen(false)
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown)
+    return () => document.removeEventListener("keydown", handleKeyDown)
+  }, [])
+
+  /* Detecta a largura da tela */
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  /* Sticky Navbar */
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.querySelector("header");
+      const scrolled = window.scrollY > 20
+
+      header?.classList.toggle("bg-white-800", scrolled);
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-black">
-      <nav className="flex justify-between items-center h-20 py-6 px-20 max-lg:px-10 max-w-[1430px] mx-auto">
-        <a href="./" title="AgriTech">
+    <header className="fixed top-0 left-0 z-50 w-full bg-transparent transition-all duration-100">
+      <nav className="flex justify-between items-center h-20 py-6 px-20 max-lg:px-10 max-md:px-6 max-w-[1430px] mx-auto">
+        <a href="/" title="AgriTech" role="link" tabIndex={0}>
           <h1 className="text-3xl font-semibold max-lg:text-2xl">AgriTech</h1>
         </a>
 
@@ -18,21 +98,41 @@ function Header() {
           <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
 
-        {/* Menu de navegação */}
-        <ul
-          className={`flex flex-col md:flex-row gap-6 absolute md:static top-20 left-0 w-full md:w-auto bg-black md:bg-transparent py-4 md:py-0 px-6 md:px-0 transition-all duration-300 z-40 
-          ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto"}`}
-        >
-          <Link href="#home" title="Início" text="início" />
-          <Link href="#about" title="Sobre" text="sobre" />
-          <Link href="#gallery" title="Galeria" text="galeria" />
-          <Link href="#projects" title="Projetos" text="projetos" />
-          <Link href="#questions" title="Dúvidas?" text="dúvidas?" />
-          <LinkButtonHover href="#enrollment" title="Inscreva-se" text="inscreva-se" />
-        </ul>
+        {/* Menu de navegação com Framer-motion */}
+        <AnimatePresence>
+          {(isOpen || isDesktop) && (
+            <motion.ul
+              key="nav-menu"
+              id="main-menu"
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -20, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className={`flex flex-col md:flex-row max-md:items-center max-md:justify-center gap-6 max-md:border-t-[1px] border-solid border-primary-500 max-md:gap-8 absolute md:static top-20 left-0 w-full md:w-auto max-md:h-[calc(100vh-80px)] bg-white-800 md:bg-transparent py-4 md:py-0 px-6 md:px-0 z-40 
+              ${isOpen || isDesktop ? "pointer-events-auto" : "pointer-events-none"}
+              `}
+            >
+              {sections.map((section) => (
+                <div key={section.to} ref={(el) => (linkRefs.current[section.to] = el)}>
+                    <Link
+                      to={section.to}
+                      title={section.title}
+                      text={section.text}
+                      onClick={() => {
+                        setIsOpen(false);
+                      }}
+                      onSetActive={() => setActiveSection(section.to)}
+                      className={activeSection === section.to ? "text-black-800 font-medium" : "text-black-500"}
+                    />
+                  </div>
+                ))}
+                <LinkButtonHover to="newsletter" title="Receba notícias" text="receba notícias" />
+            </motion.ul>
+          )}
+        </AnimatePresence>
       </nav>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header

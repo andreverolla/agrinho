@@ -1,7 +1,42 @@
-function Link(props) {
-  return (
-    <li><a href={props.href} title={props.title} className="text-xl max-lg:text-base max-md:text-xl text-secondary-black transition-colors hover:text-pattern">{props.text}</a></li>
-  )
-}
+import PropTypes from "prop-types";
+import { Link as ScrollLink } from "react-scroll";
+import { motion } from "framer-motion";
+import { forwardRef } from "react";
 
-export default Link
+const Link = forwardRef(
+  ({ to, title, text, onClick, onSetActive, className }, ref) => (
+    <motion.li
+      ref={ref}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="list-none"
+    >
+      <ScrollLink
+        to={to}
+        smooth={true}
+        duration={300}
+        offset={-80}
+        spy={true}
+        onSetActive={onSetActive}
+        onClick={onClick}
+        title={title}
+        role="link"
+        tabIndex={0}
+        className={`text-xl transition-colors cursor-pointer ${className}`}
+      >
+        {text}
+      </ScrollLink>
+    </motion.li>
+  )
+);
+
+Link.propTypes = {
+  to: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  onSetActive: PropTypes.func,
+  className: PropTypes.string,
+};
+
+export { Link };

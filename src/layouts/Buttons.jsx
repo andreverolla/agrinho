@@ -1,11 +1,23 @@
-export function LinkButtonHover (props) {
-    return (
-        <span><a href={props.href} title={props.title} className="max-lg:text-base max-md:text-xl hover:bg-hover-black font-medium border-2 border-solid rounded-full py-3 px-6 max-lg:px-4 text-button-p bg-button hover:text-pattern border-stoke">{props.text}</a></span>
-    )
-}
+import { Link as ScrollLink } from "react-scroll";
+import { motion } from "framer-motion";
 
-export function LinkButtonSimple (props) {
+export function LinkButtonHover ({ to, title, text }) {
     return (
-        <span><a href={props.href} title={props.title} className="bg-black text-pattern font-semibold py-4 px-6 rounded-full transition-colors hover:text-black hover:bg-pattern">{props.text}</a></span>
+        <motion.button 
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="list-none"
+        >
+            <ScrollLink 
+                to={to} 
+                smooth={true}
+                duration={300}
+                offset={-80}
+                title={title} 
+                className="cursor-pointer py-3 px-5 rounded-xl bg-primary-500 text-white-500 font-semibold hover:bg-primary-800 transition-colors duration-300"
+            >
+                {text}
+            </ScrollLink>
+        </motion.button>
     )
 }

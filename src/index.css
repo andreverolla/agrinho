@@ -2,15 +2,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-stoke: #5F5F5F;
-  --color-button: #1A191C;
-  --color-secondary-black: #B2AFAB;
-  --color-secondary-white: #757176;
-  --color-button-p: #D1D1D0;
-  --color-hover-black: #252328;
-  --color-hover-thumb: #CBCBCB;
-  --color-black: #131313;
-  --color-pattern: #F8F8F8;
+  --color-primary-500: #606c38;
+  --color-primary-600: #3A5A40;
+  --color-primary-700: #344E41;
+  --color-primary-800: #283618;
+  --color-white-500: #F9F6EB;
+  --color-white-800: #E8E4D5;
+  --color-block-500: #dda15e;
+  --color-block-800: #bc6c25;
+  --color-black-500: #52796f;
+  --color-black-700: #222222;
+  --color-black-800: #081c15;
   --text-xl: 1.1rem;
 
   --font-sans: "Syne", sans-serif;
@@ -19,11 +21,11 @@
 
 @layer base {
   body {
-    @apply font-sans;
+    @apply font-sans bg-white-500;
   }
 
   h1, h2, h3, p, a {
-    @apply text-pattern;
+    @apply text-black-800;
   }
 }
 
