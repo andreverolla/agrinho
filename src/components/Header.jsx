@@ -32,6 +32,11 @@ const sections = [
     to: "gallery",
     title: "Galeria",
     text: "galeria"
+  },
+  {
+    to: "newsletter",
+    title: "Receba notícias",
+    text: "receba notícias"
   }
 ];
 
@@ -78,19 +83,21 @@ function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const header = document.querySelector("header");
+      const ul = document.querySelector("motion.ul");
       const scrolled = window.scrollY > 20
 
       header?.classList.toggle("bg-white-800", scrolled);
+      ul?.classList.toggle("bg-white-800", scrolled);
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-transparent transition-all duration-100">
+    <header className="fixed top-0 left-0 z-50 w-full bg-bg-white-500 transition-all duration-100">
       <nav className="flex justify-between items-center h-20 py-6 px-20 max-lg:px-10 max-md:px-6 max-w-[1430px] mx-auto">
         <a href="/" title="AgriTech" role="link" tabIndex={0}>
-          <h1 className="text-3xl font-semibold max-lg:text-2xl">AgriTech</h1>
+          <h1 className="text-3xl font-bold max-lg:text-2xl">AgriTech</h1>
         </a>
 
         {/* Botão de menu: só aparece em telas <768px */}
@@ -108,7 +115,7 @@ function Header() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className={`flex flex-col md:flex-row max-md:items-center max-md:justify-center gap-6 max-md:border-t-[1px] border-solid border-primary-500 max-md:gap-8 absolute md:static top-20 left-0 w-full md:w-auto max-md:h-[calc(100vh-80px)] bg-white-800 md:bg-transparent py-4 md:py-0 px-6 md:px-0 z-40 
+              className={`flex flex-col md:flex-row max-md:items-center max-md:justify-center gap-6 max-md:border-t-[1px] border-solid border-primary-500 max-md:gap-8 absolute md:static top-20 left-0 w-full md:w-auto max-md:h-[calc(100vh-80px)] bg-white-500 md:bg-transparent py-4 md:py-0 px-6 md:px-0 z-40 
               ${isOpen || isDesktop ? "pointer-events-auto" : "pointer-events-none"}
               `}
             >
@@ -122,11 +129,11 @@ function Header() {
                         setIsOpen(false);
                       }}
                       onSetActive={() => setActiveSection(section.to)}
-                      className={activeSection === section.to ? "text-black-800 font-medium" : "text-black-500"}
+                      className={activeSection === section.to ? "text-black-800" : "text-black-500"}
                     />
                   </div>
                 ))}
-                <LinkButtonHover to="newsletter" title="Receba notícias" text="receba notícias" />
+                <LinkButtonHover to={sections.to} title={sections.title} text={sections.text} onClick={() => setActiveSection("")} />
             </motion.ul>
           )}
         </AnimatePresence>

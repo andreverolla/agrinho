@@ -1,7 +1,7 @@
 import { Link as ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
 
-export function LinkButtonHover ({ to, title, text }) {
+export function LinkButtonHover ({ to, title, text, onClick }) {
     return (
         <motion.button 
             whileHover={{ scale: 1.05 }}
@@ -14,6 +14,7 @@ export function LinkButtonHover ({ to, title, text }) {
                 duration={300}
                 offset={-80}
                 title={title} 
+                onClick={onClick}
                 className="cursor-pointer py-3 px-5 rounded-xl bg-primary-500 text-white-500 font-semibold hover:bg-primary-800 transition-colors duration-300"
             >
                 {text}

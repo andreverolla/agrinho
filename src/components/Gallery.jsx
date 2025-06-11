@@ -1,7 +1,35 @@
 function Gallery () {
+    const imagens = [
+    "/img/galeria1.jpg",
+    "/img/galeria2.jpg",
+    "/img/galeria3.jpg",
+    "/img/galeria4.jpg",
+    "/img/galeria5.jpg",
+    "/img/galeria6.jpg",
+    ];
+
     return (
-        <section className="h-screen" id="gallery">
-            <h1 className="text-8xl text-black text-center font-bold">galeria</h1>
+        <section id="gallery" className="bg-[#E8F5E9] py-20 px-6">
+            <div className="max-w-6xl mx-auto text-center">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#2E7D32] mb-12">
+                Galeria de Imagens
+                </h2>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                {imagens.map((src, index) => (
+                    <div
+                    key={index}
+                    className="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+                    >
+                    <img
+                        src={src}
+                        alt={`Galeria ${index + 1}`}
+                        className="w-full h-64 object-cover transform hover:scale-105 transition duration-500"
+                    />
+                    </div>
+                ))}
+                </div>
+            </div>
         </section>
     )
 }

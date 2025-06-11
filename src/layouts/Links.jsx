@@ -22,7 +22,7 @@ const Link = forwardRef(
         title={title}
         role="link"
         tabIndex={0}
-        className={`text-xl transition-colors cursor-pointer ${className}`}
+        className={`text-xl max-md:text-2xl transition-colors cursor-pointer font-semibold ${className}`}
       >
         {text}
       </ScrollLink>
