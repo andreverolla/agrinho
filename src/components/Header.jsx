@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { Link } from "../layouts/Links";
-import { LinkButtonHover } from "../layouts/Buttons";
+import { ButtonHover } from "../layouts/Buttons";
 import MenuButton from "../layouts/MenuButton";
 
 /* Navegation links */
@@ -33,11 +33,6 @@ const sections = [
     title: "Galeria",
     text: "galeria"
   },
-  {
-    to: "newsletter",
-    title: "Receba notícias",
-    text: "receba notícias"
-  }
 ];
 
 function Header() {
@@ -87,7 +82,7 @@ function Header() {
       const scrolled = window.scrollY > 20
 
       header?.classList.toggle("bg-white-800", scrolled);
-      ul?.classList.toggle("bg-white-800", scrolled);
+      ul?.classList.toggle("max-md:bg-white-800", scrolled);
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -133,7 +128,7 @@ function Header() {
                     />
                   </div>
                 ))}
-                <LinkButtonHover to={sections.to} title={sections.title} text={sections.text} onClick={() => setActiveSection("")} />
+                <ButtonHover to="newsletter" title="Receba notícias" text="receba notícias" onClick={() => setActiveSection("")} />
             </motion.ul>
           )}
         </AnimatePresence>
