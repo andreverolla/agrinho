@@ -75,10 +75,10 @@ function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-black-700 border-b-[1px] border-black-600 transition-all duration-100">
+    <header className="fixed top-0 left-0 z-50 w-full bg-almond">
       <nav className="flex justify-between items-center h-20 py-6 px-20 max-lg:px-10 max-md:px-6 max-w-[1430px] mx-auto">
         <a href="/" title="AgriTech" role="link" tabIndex={0}>
-          <h1 className="text-3xl font-bold max-lg:text-2xl">AgriTech</h1>
+          <h1 className="text-3xl font-medium font-titles max-lg:text-2xl">AgriTech</h1>
         </a>
 
         {/* Botão de menu: só aparece em telas <768px */}
@@ -110,7 +110,7 @@ function Header() {
                         setIsOpen(false);
                       }}
                       onSetActive={() => setActiveSection(section.to)}
-                      className={activeSection === section.to ? "text-white" : "text-gray-500"}
+                      className={activeSection === section.to ? "text-olive-800" : "text-contrast"}
                     />
                   </div>
                 ))}

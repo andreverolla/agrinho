@@ -1,28 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Wix+Madefor+Display:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-primary-500: #a7c957;
-  --color-primary-600: #6a994e;
-  --color-gray-500: #C4C4CC;
-  --color-gray-600: #8D8D99;
-  --color-black-600: #202024;
-  --color-black-700: #121214;
-  --color-black-800: #09090A;
+  --color-olive-500: #A4A175;
+  --color-olive-700: #3B4021;
+  --color-olive-600: #585635;
+  --color-olive-800: #2C2E2A;
+  --color-white: #FBFBFB;
+  --color-almond: #E5E0D8;
+  --color-contrast: #686156;
+  --color-earth: #95714F;
+  --color-vanilla: #EADED0;
+  --color-sand: #C7AF94;
+  --color-black: #252922;
   --text-xl: 1.1rem;
-  --text-2xl: 1.25rem;
 
-  --font-sans: "Syne", sans-serif;
-  --font-titles: "Wix Madefor Display", sans-serif;
+  --font-sans: "Poppins", sans-serif;
+  --font-titles: "Syne", sans-serif;
 }
 
 @layer base {
   body {
-    @apply font-sans bg-black-700;
+    @apply font-sans bg-almond;
   }
 
   h1, h2, h3, p, a {
-    @apply text-white;
+    @apply text-black;
   }
 }
 

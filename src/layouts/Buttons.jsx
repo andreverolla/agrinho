@@ -10,7 +10,7 @@ export function ButtonHover ({ to, title, text, onClick }) {
                 offset={-80}
                 title={title} 
                 onClick={onClick}
-                className="cursor-pointer py-[18px] px-6 rounded-xl bg-primary-500 text-white-500 font-semibold hover:bg-primary-800 transition-colors duration-300"
+                className="cursor-pointer py-[18px] px-6 rounded-xl bg-olive-600 text-white font-medium hover:bg-olive-700 transition-colors duration-300"
             >
                 {text}
             </ScrollLink>
@@ -27,7 +27,7 @@ export function BorderButton ({ to, title, text }) {
                 duration={300}
                 offset={-80}
                 title={title} 
-                className="cursor-pointer py-3 px-6 rounded-xl bg-transparent text-white border-[1px] border-primary-500 font-semibold hover:bg-primary-500 transition-colors duration-300"
+                className="cursor-pointer py-3 px-6 rounded-xl bg-transparent text-black border-2 border-olive-600 font-medium hover:bg-olive-600 hover:text-white transition-colors duration-300"
             >
                 {text}
             </ScrollLink>
