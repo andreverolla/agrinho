@@ -2,18 +2,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-500: #606c38;
-  --color-primary-600: #3A5A40;
-  --color-primary-700: #344E41;
-  --color-primary-800: #283618;
-  --color-white-500: #F9F6EB;
-  --color-white-800: #E8E4D5;
-  --color-block-500: #dda15e;
-  --color-block-800: #bc6c25;
-  --color-black-500: #4A4A4A;
-  --color-black-700: #2E2E2E;
-  --color-black-800: #081c15;
+  --color-primary-500: #a7c957;
+  --color-primary-600: #6a994e;
+  --color-gray-500: #C4C4CC;
+  --color-gray-600: #8D8D99;
+  --color-black-600: #202024;
+  --color-black-700: #121214;
+  --color-black-800: #09090A;
   --text-xl: 1.1rem;
+  --text-2xl: 1.25rem;
 
   --font-sans: "Syne", sans-serif;
   --font-titles: "Wix Madefor Display", sans-serif;
@@ -21,11 +18,11 @@
 
 @layer base {
   body {
-    @apply font-sans bg-white-500;
+    @apply font-sans bg-black-700;
   }
 
   h1, h2, h3, p, a {
-    @apply text-black-700;
+    @apply text-white;
   }
 }
 
