@@ -10,9 +10,9 @@
   --color-almond: #EADED0;
   --color-simple-stroke: #D8CBBD;
   --color-contrast: #686156;
-  --color-earth: #95714F;
+  --color-earth: #826142;
   --color-vanilla: #E5E0D8;
-  --color-sand: #C7AF94;
+  --color-sand: #DEC9B2;
   --color-black: #252922;
 
   --font-sans: "Poppins", sans-serif;
@@ -21,7 +21,7 @@
 
 @layer base {
   body {
-    @apply font-sans bg-almond;
+    @apply font-sans bg-almond overscroll-contain;
   }
 
   h1, h2, h3, p, a {

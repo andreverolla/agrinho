@@ -96,7 +96,7 @@ function Header() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className={`flex flex-col md:flex-row max-md:items-center max-md:justify-center gap-6 max-md:gap-8 absolute md:static top-20 left-0 w-full md:w-auto max-md:h-[calc(100vh-80px)] bg-black-700 py-4 md:py-0 px-6 md:px-0 z-40 
+              className={`flex flex-col md:flex-row max-md:items-center max-md:justify-center gap-6 max-md:gap-8 absolute md:static top-20 left-0 w-full md:w-auto max-md:h-[calc(100vh-80px)] bg-almond py-4 md:py-0 px-6 md:px-0 z-40 
               ${isOpen || isDesktop ? "pointer-events-auto" : "pointer-events-none"}
               `}
             >

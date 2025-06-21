@@ -21,9 +21,9 @@ function Projects () {
   ];
 
     return (
-        <section id="projects" className="bg-white py-20 px-6">
+        <section id="projects" className="py-20 px-6">
             <div className="max-w-6xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#2E7D32] mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-olive-700 mb-12">
                 Nossos Projetos
                 </h2>
 
@@ -31,19 +31,19 @@ function Projects () {
                 {projetos.map((projeto, index) => (
                     <div
                     key={index}
-                    className="bg-[#F1F8E9] rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300"
+                    className="bg-vanilla border-simple-stroke border rounded-lg overflow-hidden transform hover:scale-105 transition duration-300"
                     >
-                    <img
-                        src={projeto.imagem}
-                        alt={projeto.titulo}
-                        className="w-full h-48 object-cover"
-                    />
-                    <div className="p-6 text-left">
-                        <h3 className="text-xl font-semibold text-[#33691E] mb-2">
-                        {projeto.titulo}
-                        </h3>
-                        <p className="text-gray-700">{projeto.descricao}</p>
-                    </div>
+                      <img
+                          src={projeto.imagem}
+                          alt={projeto.titulo}
+                          className="w-full h-48 object-cover"
+                      />
+                      <div className="p-6 text-left">
+                          <h3 className="text-xl font-semibold text-olive-600 mb-2">
+                          {projeto.titulo}
+                          </h3>
+                          <p className="text-contrast">{projeto.descricao}</p>
+                      </div>
                     </div>
                 ))}
                 </div>

@@ -9,9 +9,9 @@ function Gallery () {
     ];
 
     return (
-        <section id="gallery" className="bg-[#E8F5E9] py-20 px-6">
+        <section id="gallery" className="py-20 px-6">
             <div className="max-w-6xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#2E7D32] mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-olive-700 mb-12">
                 Galeria de Imagens
                 </h2>
 
@@ -19,7 +19,7 @@ function Gallery () {
                 {imagens.map((src, index) => (
                     <div
                     key={index}
-                    className="overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+                    className="overflow-hidden rounded-lg border border-simple-stroke hover:shadow-xl transition duration-300"
                     >
                     <img
                         src={src}

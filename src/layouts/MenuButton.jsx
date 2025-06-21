@@ -9,15 +9,15 @@ export default function MenuButton({ isOpen, setIsOpen }) {
       aria-controls="main-menu"
     >
       <span
-        className={`h-[0.125rem] w-full rounded-[0.125rem] bg-white transition-all duration-400
+        className={`h-[0.125rem] w-full rounded-[0.125rem] bg-contrast transition-all duration-400
           ${isOpen ? 'translate-y-[7.5px] rotate-[-45deg]' : ''}`}
       />
       <span
-        className={`h-[0.125rem] w-full rounded-[0.125rem] bg-white transition-all duration-400
+        className={`h-[0.125rem] w-full rounded-[0.125rem] bg-contrast transition-all duration-400
           ${isOpen ? 'w-0 opacity-0' : ''}`}
       />
       <span
-        className={`h-[0.125rem] w-full rounded-[0.125rem] bg-white transition-all duration-400
+        className={`h-[0.125rem] w-full rounded-[0.125rem] bg-contrast transition-all duration-400
           ${isOpen ? '-translate-y-[7.5px] rotate-[45deg]' : ''}`}
       />
     </button>
