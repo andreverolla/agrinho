@@ -1,21 +1,16 @@
-import { Link } from "react-router-dom";
+import { ButtonHover } from "../layouts/Buttons";
 
 function PageNotFound() {
   return (
-    <section id="notfound" className="min-h-screen bg-[#FDF6EC] flex flex-col items-center justify-center text-center px-6">
-      <h1 className="text-7xl font-bold text-[#2E7D32] mb-4">404</h1>
-      <h2 className="text-2xl md:text-3xl font-semibold text-[#388E3C] mb-4">
+    <section id="notfound" className="min-h-screen max-w-[1480px] flex flex-col items-center justify-center text-center px-8">
+      <h1 className="text-[9rem] max-md:text-8xl max-lg:text-[8rem] font-bold text-olive-600 mb-4">404</h1>
+      <h2 className="text-2xl text-titles md:text-3xl font-semibold text-olive-500 mb-4">
         Opa! Página não encontrada.
       </h2>
-      <p className="text-gray-600 max-w-md mb-8">
+      <p className="text-xl max-w-xl max-md:text-base text-contrast mb-8">
         A página que você está procurando não existe ou foi movida. Verifique o endereço ou volte à página inicial.
       </p>
-      <Link
-        to="/"
-        className="bg-[#4CAF50] hover:bg-[#388E3C] text-white px-6 py-3 rounded-2xl transition"
-      >
-        Voltar para o Início
-      </Link>
+      <ButtonHover to="/" title="Voltar" text="Voltar para o início" />
     </section>
   );
 }
