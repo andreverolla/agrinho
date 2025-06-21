@@ -14,8 +14,8 @@ function About () {
                 </div>
 
                 {/* Texto */}
-                <div className="w-full md:w-1/2 text-olive-800">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <div className="w-full md:w-1/2">
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-olive-800">
                     Sobre o Projeto
                 </h2>
                 <p className="text-lg text-earth mb-4">

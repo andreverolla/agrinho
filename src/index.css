@@ -38,11 +38,11 @@ html::-webkit-scrollbar {
   width: 10px;
 }
 html::-webkit-scrollbar-thumb {
-  background: var(--color-pattern);
+  background: var(--color-olive-500);
 }
 html::-webkit-scrollbar-thumb:hover {
-  background: var(--color-hover-thumb);
+  background: var(--color-olive-600);
 }
 html::-webkit-scrollbar-track {
-  background: var(--color-black);
+  background: var(--color-contrast);
 }
