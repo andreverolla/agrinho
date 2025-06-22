@@ -10,7 +10,7 @@ import History from "./components/History"
 import Gallery from "./components/Gallery"
 import Newsletter from "./components/Newsletter"
 import Footer from "./components/Footer"
-//import PageNotFound from "./components/PageNotFound"
+import PageNotFound from "./components/PageNotFound"
 import Quiz from "./components/Quiz";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={
+        <Route path="/agrinho" element={
           <>
             <Header />
             <Home />
@@ -30,7 +30,7 @@ function App() {
             <Newsletter />
           </>
         } />
-        {/* <Route path="*" element={<PageNotFound />} /> */}
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
 
