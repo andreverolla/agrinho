@@ -75,7 +75,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-almond">
+    <header className="fixed top-0 left-0 z-50 w-full bg-almond border-b border-simple-stroke">
       <nav className="flex justify-between items-center h-20 py-6 px-20 max-lg:px-10 max-md:px-6 max-w-[1430px] mx-auto">
         <a href="/" title="GerminAction" role="link" tabIndex={0}>
           <h1 className="text-3xl font-medium font-titles max-lg:text-2xl">Germin<strong className="text-earth">a</strong>ction</h1>
@@ -114,7 +114,28 @@ function Header() {
                     />
                   </div>
                 ))}
-                <span><ScrollLink to="newsletter" title="Receba notícias" className="font-titles text-base max-md:text-xl cursor-pointer py-3 px-5 max-lg:px-3 max-md:px-5 max-md:py-4 rounded-xl bg-transparent text-olive-700 border-2 border-olive-700 font-medium hover:bg-olive-700 hover:text-white transition-colors duration-300">Receba notícias</ScrollLink></span>
+                <span 
+                  onClick={() => {
+                      setIsOpen(false);
+                    }}
+                  >
+                    <ScrollLink 
+                      smooth={true}
+                      duration={300}
+                      offset={-80}
+                      spy={true}
+                      role="link"
+                      tabIndex={0}
+                      to="quiz" 
+                      title="Faça o nosso quiz" 
+                      onClick={() => {
+                        setIsOpen(false);
+                      }}
+                      className="font-titles text-base max-md:text-xl cursor-pointer py-3 px-5 max-lg:px-3 max-md:px-5 max-md:py-4 rounded-xl bg-transparent text-olive-700 border-2 border-olive-700 font-medium hover:bg-olive-700 hover:text-white transition-colors duration-300"
+                    >
+                      Quizz
+                    </ScrollLink>
+                  </span>
             </motion.ul>
           )}
         </AnimatePresence>

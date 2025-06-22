@@ -11,6 +11,7 @@ import Gallery from "./components/Gallery"
 import Newsletter from "./components/Newsletter"
 import Footer from "./components/Footer"
 import PageNotFound from "./components/PageNotFound"
+import Quiz from "./components/Quiz";
 
 function App() {
 
@@ -25,15 +26,27 @@ function App() {
             <Projects />
             <History />
             <Gallery />
+             <Quiz />
             <Newsletter />
           </>
         } />
-
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
 
-      <ToastContainer />
+      {/* Toasts globais */}
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </>
   )
 }
