@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/agrinho" element={
+        <Route path="/" element={
           <>
             <Header />
             <Home />
@@ -30,7 +30,7 @@ function App() {
             <Newsletter />
           </>
         } />
-        <Route path="/agrinho/*" element={<PageNotFound />} />
+        <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <Footer />
 
