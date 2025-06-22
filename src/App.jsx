@@ -30,7 +30,7 @@ function App() {
             <Newsletter />
           </>
         } />
-        <Route path="*" element={<PageNotFound />} />
+        <Route path="/agrinho/*" element={<PageNotFound />} />
       </Routes>
       <Footer />
 
