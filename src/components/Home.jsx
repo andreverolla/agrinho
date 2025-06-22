@@ -2,7 +2,7 @@ import { ButtonHover } from "../layouts/Buttons"
 
 function Home() {
   return (
-    <section id="home" className="min-h-screen w-full px-8 py-16 bg-[url('./assets/pattern.svg')]">
+    <section id="home" className="min-h-screen w-full px-8 p-16 bg-[url('./images/pattern.svg')]">
       <div className="max-w-[1280px] mx-auto flex items-center justify-center flex-col mt-24">
         <div className="w-[75%] text-center max-lg:w-[85%] max-md:w-full">
           <span className="text-earth border border-simple-stroke bg-vanilla py-1.5 px-2 text-sm rounded-lg font-medium">Olá, seja bem vindo!</span>

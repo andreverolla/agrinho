@@ -12,7 +12,7 @@ function Footer () {
                 <div>
                     <h2 className="text-2xl font-bold mb-3 text-almond">GerminAction</h2>
                     <p className="text-md tracking-tight text-olive-500">
-                        Educação e Sustentabilidade no Campo. Projeto desenvolvido com foco na transformação social e ambiental.
+                        Todas as imagens utilizadas foram retiradas do site da <a href="https://www.riobom.pr.gov.br/" target="_blank" rel="noopener noreferrer" className="underline">Prefeitura de Rio Bom.</a>
                     </p>
                 </div>
 

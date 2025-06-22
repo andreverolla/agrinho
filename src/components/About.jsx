@@ -1,4 +1,4 @@
-import aboutImage from "../assets/about-img.svg"
+import aboutImage from "../images/about-img.svg"
 import { BorderButton, ButtonHover } from "../layouts/Buttons"
 
 function About () {
