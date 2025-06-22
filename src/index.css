@@ -23,6 +23,10 @@
   body {
     @apply font-sans bg-almond text-black;
   }
+
+  h1, h2 {
+    @apply font-titles;
+  }
 }
 
 ::selection {

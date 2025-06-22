@@ -6,7 +6,7 @@ import Header from "./components/Header"
 import Home from "./components/Home"
 import About from "./components/About"
 import Projects from "./components/Projects"
-import Stories from "./components/Stories"
+import History from "./components/History"
 import Gallery from "./components/Gallery"
 import Newsletter from "./components/Newsletter"
 import Footer from "./components/Footer"
@@ -23,7 +23,7 @@ function App() {
             <Home />
             <About />
             <Projects />
-            <Stories />
+            <History />
             <Gallery />
             <Newsletter />
           </>

@@ -18,7 +18,7 @@ function Gallery () {
     ];
 
     return (
-        <section id="gallery" className="py-20 px-6">
+        <section id="gallery" className="py-20 px-8 bg-[url('./images/pattern.svg')]">
             <div className="max-w-[1280px] mx-auto text-center">
                 <h1 className="text-3xl md:text-4xl font-bold text-olive-700 mb-16">Veja as fotos de Rio Bom</h1>
 

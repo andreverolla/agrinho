@@ -3,8 +3,8 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { Link } from "../layouts/Links";
-import { BorderButton } from "../layouts/Buttons";
 import MenuButton from "../layouts/MenuButton";
+import { Link as ScrollLink } from "react-scroll";
 
 /* Navegation links */
 const sections = [
@@ -24,9 +24,9 @@ const sections = [
     text: "projetos"
   },
   {
-    to: "stories",
-    title: "Histórias",
-    text: "histórias"
+    to: "history",
+    title: "História",
+    text: "história"
   },
   {
     to: "gallery",
@@ -96,7 +96,7 @@ function Header() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className={`flex flex-col md:flex-row max-md:items-center max-md:justify-center gap-6 max-md:gap-8 absolute md:static top-20 left-0 w-full md:w-auto max-md:h-[calc(100vh-80px)] bg-almond py-4 md:py-0 px-6 md:px-0 z-40 
+              className={`flex flex-col md:flex-row max-md:items-center max-md:justify-center gap-2 max-md:gap-9 absolute md:static top-20 left-0 w-full md:w-auto max-md:h-[calc(100vh-80px)] bg-almond py-4 md:py-0 px-6 md:px-0 z-40 
               ${isOpen || isDesktop ? "pointer-events-auto" : "pointer-events-none"}
               `}
             >
@@ -110,11 +110,11 @@ function Header() {
                         setIsOpen(false);
                       }}
                       onSetActive={() => setActiveSection(section.to)}
-                      className={activeSection === section.to ? "text-olive-800" : "text-contrast"}
+                      className={activeSection === section.to ? "text-olive-700 bg-simple-stroke" : "text-contrast"}
                     />
                   </div>
                 ))}
-                <BorderButton to="newsletter" title="Receba notícias" text="receba notícias" onClick={() => setActiveSection("")} />
+                <span><ScrollLink to="newsletter" title="Receba notícias" className="font-titles text-base max-md:text-xl cursor-pointer py-3 px-5 max-lg:px-3 max-md:px-5 max-md:py-4 rounded-xl bg-transparent text-olive-700 border-2 border-olive-700 font-medium hover:bg-olive-700 hover:text-white transition-colors duration-300">Receba notícias</ScrollLink></span>
             </motion.ul>
           )}
         </AnimatePresence>

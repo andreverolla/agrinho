@@ -50,7 +50,7 @@ function Newsletter () {
     }
 
     return (
-        <section id="newsletter" className="bg-sand py-20 px-6">
+        <section id="newsletter" className="bg-sand py-20 px-6 max-lg:px-12 max-md:px-8">
             <div className="max-w-3xl mx-auto">
                 <span className="uppercase text-sm text-earth bg-almond border border-simple-stroke px-4 py-1 rounded-md">newsletter</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-olive-800 my-4">

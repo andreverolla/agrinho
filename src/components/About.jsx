@@ -3,24 +3,27 @@ import { BorderButton, ButtonHover } from "../layouts/Buttons"
 
 function About () {
     return (
-        <section id="about" className="bg-sand w-full h-full px-8 py-18">
-            <div className="mx-auto flex flex-col md:flex-row justify-between items-center gap-10 max-w-[1280px] max-md:justify-center">
-                <div className="w-full md:w-1/2">
+        <section id="about" className="bg-sand w-full h-full px-8 py-22">
+            <div className="mx-auto flex max-lg:flex-col flex-row justify-between items-center gap-10 max-w-[1280px] max-lg:justify-center">
+                <div className="max-lg:w-full w-1/2">
                     <h1 className="text-3xl md:text-4xl font-bold mb-2">Sobre o Projeto</h1>
-                    <span className="h-[2px] w-16 rounded-sm bg-olive-600 block mb-4"></span>
+                    <span className="h-[2px] w-16 rounded-sm bg-olive-600 block mb-8"></span>
                     <p className="text-lg text-contrast mb-4">
-                        Nosso projeto tem como objetivo levar conhecimento e práticas sustentáveis às comunidades do campo, unindo educação ambiental e inovação social para promover um futuro mais consciente e equilibrado.
+                        Nosso projeto tem como missão fortalecer os laços entre a comunidade rural e urbana por meio da valorização da história de Rio Bom, da educação ambiental e do uso da tecnologia como ferramenta de transformação social.
+                    </p>
+                    <p className="text-lg text-contrast mb-4">
+                        Partindo do tema “Festejando a conexão campo-cidade”, desenvolvemos este site como um espaço educativo e interativo, onde resgatamos a memória do município, destacamos suas raízes agrícolas e promovemos reflexões sobre sustentabilidade e pertencimento.
                     </p>
                     <p className="text-lg text-contrast">
-                        Através de atividades educativas, uso da tecnologia e valorização da cultura rural, buscamos transformar a realidade dos jovens e agricultores locais, incentivando a preservação do meio ambiente e o desenvolvimento sustentável.
+                        Através da participação de estudantes, do uso de recursos digitais e da produção colaborativa de conteúdo, incentivamos o orgulho local, a preservação do meio ambiente e a construção de um futuro mais justo, consciente e conectado.
                     </p>
-                    <div className="flex flex-col md:flex-row gap-4 max-md:gap-10 mt-10">
+                    <div className="flex flex-col md:flex-row gap-4 max-lg:gap-10 mt-10">
                         <ButtonHover to="newsletter" title="Inscreva-se" text="Faça parte do projeto" />
                         <BorderButton to="gallery" title="Ver galeria de fotos" text="Ver galeria de fotos" />
                     </div>
                 </div>
 
-                <div className="w-full md:w-1/2 mt-16 max-md:mt-12">
+                <div className="max-lg:w-full w-1/2 mt-16 max-md:mt-12">
                     <img
                         src={aboutImage}
                         alt="Imagem de um coração com elementos da natureza"
