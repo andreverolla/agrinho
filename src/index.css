@@ -21,12 +21,13 @@
 
 @layer base {
   body {
-    @apply font-sans bg-almond overscroll-contain;
+    @apply font-sans bg-almond text-black;
   }
+}
 
-  h1, h2, h3, p, a {
-    @apply text-black;
-  }
+::selection {
+  background: var(--color-olive-500);
+  color: var(--color-white);
 }
 
 body {

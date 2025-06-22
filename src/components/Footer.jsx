@@ -1,3 +1,5 @@
+import { Link as ScrollLink } from "react-scroll";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
@@ -76,7 +78,18 @@ function Footer () {
             <div className="text-center border-t border-olive-600 py-8 px-6">
                 <h2 className='text-md text-olive-500 mb-4'>© {new Date().getFullYear()} GerminAction. Todos os direitos reservados.</h2>
 
-                <a href="/" title='voltar ao topo' className='text-sm text-white hover:bg-olive-600 transition-colors rounded-md p-2 text-decoration hover:text-gray-200'><FontAwesomeIcon icon={faArrowUp} /> Voltar ao topo</a>
+                <ScrollLink 
+                    to="home" 
+                    smooth={true}
+                    duration={300}
+                    offset={-80}
+                    role="link"
+                    tabIndex={0}
+                    title='voltar ao topo' 
+                    className='text-sm text-white cursor-pointer hover:bg-olive-600 transition-colors rounded-md p-2 text-decoration hover:text-gray-200'
+                >
+                    <FontAwesomeIcon icon={faArrowUp} /> Voltar ao topo
+                </ScrollLink>
             </div>
         </footer>
     )

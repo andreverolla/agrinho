@@ -7,8 +7,6 @@ const Link = forwardRef(
   ({ to, title, text, onClick, onSetActive, className }, ref) => (
     <motion.li
       ref={ref}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
       className="list-none"
     >
       <ScrollLink
@@ -22,7 +20,7 @@ const Link = forwardRef(
         title={title}
         role="link"
         tabIndex={0}
-        className={`text-lg transition-colors cursor-pointer ${className}`}
+        className={`text-lg cursor-pointer ${className}`}
       >
         {text}
       </ScrollLink>
