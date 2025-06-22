@@ -2,7 +2,7 @@
   "name": "agrinho",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://andreverolla.github.io/agrinho/",
+  "homepage": "https://andreverolla.github.io/agrinho",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

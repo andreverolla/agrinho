@@ -10,7 +10,7 @@ function PageNotFound() {
       <p className="text-xl max-w-xl max-md:text-base text-contrast mb-8">
         A página que você está procurando não existe ou foi movida. Verifique o endereço ou volte à página inicial.
       </p>
-      <span><a href="/" tabIndex={0} role="link" title="Voltar para o site" className="font-titles cursor-pointer py-[18px] px-6 rounded-xl bg-olive-600 text-white font-medium hover:bg-olive-700 transition-colors duration-300">Voltar para o site</a></span>
+      <span><a href="/agrinho/" tabIndex={0} role="link" title="Voltar para o site" className="font-titles cursor-pointer py-[18px] px-6 rounded-xl bg-olive-600 text-white font-medium hover:bg-olive-700 transition-colors duration-300">Voltar para o site</a></span>
     </section>
   );
 }
