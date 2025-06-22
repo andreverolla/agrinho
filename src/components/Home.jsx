@@ -18,7 +18,7 @@ function Home() {
         <div className="rounded-lg bg-contrast p-1.5 mt-24 w-full">
           <iframe 
             src="https://www.youtube.com/embed/baI_A09OVh0" title="Vídeo sobre a tradicional festa do churrasco no espeto de bambu em Rio Bom" 
-            frameborder="0" 
+            frameBorder="0" 
             className="h-[36rem] max-lg:h-80 w-full m-auto"
             allowFullScreen
           ></iframe>

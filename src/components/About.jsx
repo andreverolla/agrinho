@@ -1,10 +1,10 @@
-import aboutImage from "../images/about-img.svg"
+import aboutImage from "../images/about-img.jpg"
 import { BorderButton, ButtonHover } from "../layouts/Buttons"
 
 function About () {
     return (
         <section id="about" className="bg-sand w-full h-full px-8 py-22">
-            <div className="mx-auto flex max-lg:flex-col flex-row justify-between items-center gap-10 max-w-[1280px] max-lg:justify-center">
+            <div className="mx-auto max-w-[1280px] flex flex-col lg:flex-row lg:justify-between items-center gap-10">
                 <div className="max-lg:w-full w-1/2">
                     <h1 className="text-3xl md:text-4xl font-bold mb-2">Sobre o Projeto</h1>
                     <span className="h-[2px] w-16 rounded-sm bg-olive-600 block mb-8"></span>
@@ -23,11 +23,11 @@ function About () {
                     </div>
                 </div>
 
-                <div className="max-lg:w-full w-1/2 mt-16 max-md:mt-12">
+                <div className="max-lg:w-full w-1/2 mt-16 max-md:mt-12 flex items-center justify-center">
                     <img
                         src={aboutImage}
                         alt="Imagem de um coração com elementos da natureza"
-                        className="max-w-xl max-md:w-full"
+                        className="max-w-[27rem] max-md:w-full rounded-xl border border-simple-stroke"
                     />
                 </div>
             </div>
