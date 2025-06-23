@@ -3,7 +3,6 @@
 export default {
   content: [
     "./index.html",
-    "./public/404.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
