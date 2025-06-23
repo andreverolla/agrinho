@@ -1,5 +1,5 @@
 function Gallery () {
-    const imagens = [
+    const images = [
     "/assets/1.jpg",
     "/assets/2.jpeg",
     "/assets/3.jpeg",
@@ -23,7 +23,7 @@ function Gallery () {
                 <h1 className="text-3xl md:text-4xl font-bold text-olive-700 mb-16">Veja as fotos de Rio Bom</h1>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {imagens.map((src, index) => (
+                {images.map((src, index) => (
                     <div
                     key={index}
                     className="overflow-hidden rounded-lg border border-simple-stroke transition-all"

@@ -42,7 +42,7 @@ function Footer () {
                     <h3 className="font-semibold text-2xl mb-8 text-almond">Siga-me</h3>
                     <ul className="flex gap-4">
                         <li className='relative group'>
-                            <span className='absolute left-1/2 -top-8 -translate-x-1/2 px-2 py-1 text-xs text-white rounded opacity-0 group-hover:opacity-100 group-hover:-top-12 transition-all duration-300 bg-olive-600'>Github</span>
+                            <span className='absolute left-1/2 -top-8 -translate-x-1/2 px-2 py-1 text-xs text-white rounded opacity-0 group-hover:opacity-100 group-hover:-top-12 transition-all duration-300 bg-olive-600'>Instagram</span>
                             <a 
                                 href="https://instagram.com/andrejuliani.v"
                                 className="relative h-[60px] w-[60px] rounded-full bg-olive-500 text-olive-700 overflow-hidden flex items-center justify-center group hover:text-white transition-all duration-300"
